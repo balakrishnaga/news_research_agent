@@ -1,6 +1,6 @@
 # 🎬 Movie News Agent
 
-An **Agentic AI** system built with **LangGraph** and **LangChain** that scrapes the latest Telugu cinema news, cross-verifies facts, and writes engaging, SEO-optimized articles (≤250 words) with plagiarism-free headlines.
+An **Agentic AI** system built with **LangGraph** and **LangChain** that scrapes the latest cinema news, cross-verifies facts, and writes engaging, SEO-optimized articles (≤250 words) with plagiarism-free headlines.
 
 ---
 
@@ -108,7 +108,7 @@ START
 ## 📁 Project Structure
 
 ```
-telugu_news_research_agent/
+news_research_agent/
 ├── main.py              # Entry point
 ├── config.yaml          # All configuration
 ├── requirements.txt
