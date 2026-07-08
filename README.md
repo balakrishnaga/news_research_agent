@@ -1,4 +1,4 @@
-# 🎬 Telugu Movie News Agent
+# 🎬 Movie News Agent
 
 An **Agentic AI** system built with **LangGraph** and **LangChain** that scrapes the latest Telugu cinema news, cross-verifies facts, and writes engaging, SEO-optimized articles (≤250 words) with plagiarism-free headlines.
 
