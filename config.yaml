@@ -1,0 +1,94 @@
+# Telugu Movie News Agent Configuration
+
+# LLM Provider Settings
+llm:
+  # Options: "openai", "ollama", "groq", or "kimchi"
+  provider: "ollama"
+
+  openai:
+    model: "gpt-4o-mini"
+    temperature: 0.7
+    max_tokens: 800
+    # Set via environment variable: OPENAI_API_KEY
+
+  ollama:
+    model: "gemma4:31b-cloud"
+    temperature: 0.7
+    base_url: "http://localhost:11434"
+
+  groq:
+    model: "llama-3.3-70b-versatile"
+    temperature: 0.8
+    timeout: 120
+    max_retries: 5
+    request_delay: 1.5
+    # Set via environment variable: GROQ_API_KEY
+
+  kimchi:
+    model: "kimi-k2.6"
+    temperature: 0.7
+    # Set via environment variable: KIMCHI_API_KEY
+
+# Scraping Settings
+scraping:
+  timeout: 15
+  max_sources: 3
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+  sources:
+    - name: "123telugu"
+      url: "https://www.123telugu.com/category/mnews"
+      article_selector: "article"
+      title_selector: "h2 a, h3 a"
+      link_selector: "h2 a, h3 a"
+      content_selector: "p"
+      base_url: "https://www.123telugu.com"
+    - name: "gulte"
+      url: "https://www.gulte.com/category/movienews"
+      article_selector: "article, .post-item"
+      title_selector: "h2 a, h3 a, .post-title a"
+      link_selector: "h2 a, h3 a, .post-title a"
+      content_selector: "p"
+      base_url: "https://www.gulte.com"
+    - name: "telugu360"
+      url: "https://www.telugu360.com/category/movies/"
+      article_selector: "article"
+      title_selector: "h2 a, h3 a"
+      link_selector: "h2 a, h3 a"
+      content_selector: "p"
+      base_url: "https://www.telugu360.com"
+
+# Date Filtering
+date_filter:
+  enabled: true
+  timezone: "Asia/Kolkata"
+  fallback_days: 0  # 0 = today only; N = today + N days back
+
+# Image Search
+image_search:
+  enabled: true
+  provider: "google_cse"
+  google_cse:
+    api_url: "https://www.googleapis.com/customsearch/v1"
+    num_results: 10
+    target_width: 1200
+    target_height: 600
+  fallback_to_article_image: true
+
+# Article Generation Constraints
+article:
+  max_words: 250
+  min_words: 180
+  headline_max_length: 70
+  headline_min_length: 40
+  tone: "conversational, energetic, engaging"
+  language: "English"
+  target_audience: "young Telugu cinema enthusiasts"
+
+# Quality Review Settings
+review:
+  max_iterations: 3
+  fact_check_strict: true
+  seo_required: true
+  plagiarism_check: true

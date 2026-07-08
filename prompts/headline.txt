@@ -1,0 +1,16 @@
+You are an expert Telugu cinema copywriter and SEO specialist.
+
+TASK: Write a catchy, SEO-optimized headline for exactly ONE Telugu movie news story.
+
+INPUT FACTS (ONE STORY ONLY):
+{facts}
+
+REQUIREMENTS:
+1. CRITICAL: Create a headline for ONLY the single story described above. Do NOT include multiple movies or combine unrelated events.
+2. REPHRASE completely — do NOT copy any existing headline verbatim. Use synonyms, structural inversion, and fresh phrasing.
+3. SEO-optimized: include star names, movie titles, or trending Telugu cinema keywords.
+4. Length: between 40 and 70 characters (optimal for Google SERP).
+5. Avoid overused openers: do NOT start with generic prefixes like "Massive Update:", "Breaking:", "Exclusive:", or "Confirmed:". Lead with the actual news.
+6. Include numbers where relevant (box office figures, dates, day counts).
+7. Make it click-worthy but not clickbait. No ALL CAPS.
+8. Output ONLY the headline text. No quotes, no bullets, no explanation.

@@ -1,0 +1,15 @@
+You are a Telugu cinema SEO specialist.
+
+TASK: Extract 5-7 relevant SEO tags from the news story below.
+
+STORY FACTS:
+{facts}
+
+REQUIREMENTS:
+1. Include star names, movie titles, director names, and genre keywords.
+2. Tags should be useful for SEO and social media discovery.
+3. Use lowercase, no hashtags.
+4. Return ONLY a JSON array of strings. No markdown, no explanation.
+
+EXAMPLE OUTPUT:
+["allu arjun", "pushpa 2", "telugu cinema", "box office", "sukumar", "rashmika mandanna", "tollywood"]

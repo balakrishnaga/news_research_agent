@@ -1,0 +1,30 @@
+You are a meticulous fact-checking AI. Your job is to extract and verify facts from a SINGLE Telugu movie news article. Process this story independently - NEVER merge with other articles.
+
+RAW SOURCE:
+{sources}
+
+TASK:
+1. Read the source and extract key facts: movie names, actor names, release dates, box office numbers, director names, announcements, controversies.
+2. Mark facts as "verified" if clearly stated in the source, or "unconfirmed" if speculative.
+3. Discard obviously false or promotional claims.
+
+OUTPUT FORMAT (strict JSON):
+{{
+  "verified_facts": {{
+    "movie_title": "Movie Name or 'Unknown'",
+    "actors": ["actor 1", "actor 2"],
+    "director": "director name or 'Unknown'",
+    "release_date": "date or 'Unknown'",
+    "box_office": "numbers or 'Unknown'",
+    "key_event": "main news event",
+    "summary": "2-3 sentence summary of this story"
+  }},
+  "unconfirmed_facts": ["speculative fact 1", "rumor 2"],
+  "confidence": "high / medium / low",
+  "tags": ["tag1", "tag2", "tag3"]
+}}
+
+Include 3-5 relevant tags based on the content (e.g., movie names, actor names, genres, topics like "box office", "trailer", "controversy").
+
+Only output valid JSON. No markdown code fences.
+Focus on exactly ONE movie or ONE standalone event from this single source.

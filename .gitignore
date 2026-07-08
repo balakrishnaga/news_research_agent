@@ -1,0 +1,4 @@
+.env
+.pytest_cache
+.claude
+__pycache__
